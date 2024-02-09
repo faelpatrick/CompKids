@@ -1,5 +1,5 @@
 <template>
-    <v-card class="ma-8" elevation="2">
+    <v-card class="conteudo" elevation="2">
 
         <!-- <h1 class="d-flex align-center justify-center">Jogo Compara Peças Pc</h1> -->
 
@@ -10,7 +10,7 @@
                     <span class="placar"> {{ erros }}</span>
                 </v-card>
                 <v-card class="pa-4">
-                    <h1> Escolha a opção correta</h1>
+                    <h1 class="placar_titulo"> Escolha a opção correta</h1>
                 </v-card>
                 <v-card width="100" class="pa-4 d-flex align-center justify-center flex-column" color="green">Acertos
                     <span class="placar"> {{ acertos }}</span>
@@ -162,6 +162,10 @@ const shuffle = () => {
 </script>
   
 <style scoped>
+
+.conteudo {
+    min-height: 90vh;
+}
 .cards_principal {
     display: flex;
     flex-direction: column;
@@ -169,8 +173,8 @@ const shuffle = () => {
     align-items: center;
     text-align: center;
     gap: 1px;
-    margin: 0 8px 0 20px;
-    padding: 0px 12px;
+    margin: 0 8px 0 2rem;
+    padding: 1rem 2rem;
     background-color: #ededed;
     border-radius: 10px;
     border: solid 2px #58585870;
@@ -188,8 +192,8 @@ const shuffle = () => {
 
 
 .img_opcao {
-    width: 114px;
-    height: 114px;
+    width: 100%;
+    height: 200px;
     margin: 4px;
     border-radius: 16px;
     filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
@@ -197,11 +201,13 @@ const shuffle = () => {
 }
 
 #img_principal {
-    width: 300px;
+    width: 350px;
 }
 
 .img_desc {
-    font-size: 14px;
+    font-size: 1.4rem;
+    padding: 1rem;
+    line-height: 2;
     text-align: justify;
 }
 
@@ -213,5 +219,32 @@ const shuffle = () => {
 .v-row.grid_imgs {
     display: grid;
     grid-template-columns: 1fr 2fr;
+}
+
+@media screen and (max-width: 1024px) {
+    .v-row.grid_imgs {
+        display: flex;
+        flex-direction: column;
+    }
+    .cards_principal {
+        margin: 0;
+    }
+    .cards_opcoes {
+        margin: 0;
+        padding: 2px
+    }
+    #img_principal {
+        width: 94%;
+    }
+    .img_opcao {
+        height: 140px;
+     }
+    .img_desc {
+        font-size: 1rem;
+    }
+    .placar_titulo {
+        font-size: 1.2rem;
+    }
+    
 }
 </style>
