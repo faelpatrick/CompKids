@@ -241,6 +241,7 @@ const shuffle = () => {
      }
     .img_desc {
         font-size: 1rem;
+        line-height: 1;
     }
     .placar_titulo {
         font-size: 1.2rem;
