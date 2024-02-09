@@ -29,7 +29,8 @@
                 </div>
             </v-col>
             <v-col class="cards_opcoes">
-                <v-card class="card pa-1" v-for="pecas in pecasComputador" :key="pecas.id" @click="checkAssociation">
+                <v-card class="card pa-1" v-for="pecas in pecasComputador" :key="pecas.id"
+                    @click="checkAssociation(pecas.id)">
                     <img class="img_opcao" :src="pecas.ImgCompara" />
                 </v-card>
             </v-col>
@@ -43,6 +44,8 @@
                 </v-btn>
             </template>
         </v-snackbar>
+
+        <!-- <v-progress-circular id="loading" size="100" v-if="loading" indeterminate color="primary"></v-progress-circular> -->
     </v-card>
 </template>
   
@@ -137,16 +140,18 @@ const pecasComputador = ref([
 ]);
 const acertos = ref(0);
 const erros = ref(0);
+const loading = ref(false);
 
 onMounted(() => {
     mostrarSnackbar.value = false;
     shuffle();
 });
 
-const checkAssociation = () => {
-    if (pecasComputador[0].Compara === pecasComputador[0].Nome) {
+const checkAssociation = (id) => {
+    if (imgPrincipal.id === id) {
         acertos.value++;
         snackBarMsg.value = 'Parabéns, você acertou!!!';
+        shuffle();
     } else {
         erros.value++;
         snackBarMsg.value = 'Que pena, você errou!!!';
@@ -155,10 +160,15 @@ const checkAssociation = () => {
 };
 
 const shuffle = () => {
+    loading.value = true;
     pecasComputador.value.sort(() => Math.random() - 0.5);
     imgPrincipal = pecasComputador.value[0];
+    pecasComputador.value.sort(() => Math.random() - 0.5);
 };
 
+setTimeout(() => {
+    loading.value = false;
+}, 500);
 </script>
   
 <style scoped>
@@ -221,6 +231,24 @@ const shuffle = () => {
     grid-template-columns: 1fr 2fr;
 }
 
+#loading {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-color: #00000050;
+    transform: translate(-50%, -50%);
+}
+
+#loadinIcon {
+    width: 200px;
+}
+
 @media screen and (max-width: 1024px) {
     .conteudo {
         margin: -20px;
@@ -257,4 +285,5 @@ const shuffle = () => {
         font-size: 1.2rem;
     }
 
-}</style>
+}
+</style>
