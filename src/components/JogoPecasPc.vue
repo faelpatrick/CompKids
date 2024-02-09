@@ -162,10 +162,10 @@ const shuffle = () => {
 </script>
   
 <style scoped>
-
 .conteudo {
     min-height: 90vh;
 }
+
 .cards_principal {
     display: flex;
     flex-direction: column;
@@ -222,30 +222,39 @@ const shuffle = () => {
 }
 
 @media screen and (max-width: 1024px) {
+    .conteudo {
+        margin: -20px;
+    }
+
     .v-row.grid_imgs {
         display: flex;
         flex-direction: column;
     }
+
     .cards_principal {
         margin: 0;
     }
+
     .cards_opcoes {
         margin: 0;
         padding: 2px
     }
+
     #img_principal {
         width: 94%;
     }
+
     .img_opcao {
         height: 140px;
-     }
+    }
+
     .img_desc {
         font-size: 1rem;
-        line-height: 1;
+        line-height: 1.2;
     }
+
     .placar_titulo {
         font-size: 1.2rem;
     }
-    
-}
-</style>
+
+}</style>
