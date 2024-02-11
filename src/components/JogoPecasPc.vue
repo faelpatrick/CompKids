@@ -199,7 +199,7 @@ setTimeout(() => {
     gap: 4px;
 }
 
-.placar-title{
+.placar_titulo{
   width: 83%;
   height: 100%;
   display: flex;
