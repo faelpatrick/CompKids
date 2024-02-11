@@ -9,8 +9,8 @@
                     Erros
                     <span class="placar"> {{ erros }}</span>
                 </v-card>
-                <v-card class="pa-4">
-                    <h1 class="placar_titulo"> Escolha a opção correta</h1>
+                <v-card class="placar_titulo pa-4">
+                    <h1 class=""> Escolha a opção correta</h1>
                 </v-card>
                 <v-card width="100" class="pa-4 d-flex align-center justify-center flex-column" color="green">Acertos
                     <span class="placar"> {{ acertos }}</span>
