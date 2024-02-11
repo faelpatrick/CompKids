@@ -44,15 +44,15 @@
                 </v-btn>
             </template>
         </v-snackbar>
-        <v-footer class="d-flex flex-column">
-            <div class="px-4 py-2 bg-black text-center w-100">
-                Desenvolvido por 
-                <a href="https://rafaelpatrick.com.br/" target="_blank" rel="noopener noreferrer">
-                    Rafael Patrick de Souza
-                </a>
-            </div>
-        </v-footer>
     </v-card>
+    <v-footer class="d-flex flex-column">
+        <div class="px-4 py-2 bg-black text-center w-100 footer">
+            Desenvolvido por
+            <a href="https://rafaelpatrick.com.br/" target="_blank" rel="noopener noreferrer">
+                Rafael Patrick de Souza
+            </a>
+        </div>
+    </v-footer>
 </template>
   
 <script setup>
@@ -205,12 +205,12 @@ setTimeout(() => {
     gap: 4px;
 }
 
-.placar_titulo{
-  width: 83%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.placar_titulo {
+    width: 83%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img_opcao {
@@ -260,6 +260,12 @@ setTimeout(() => {
 
 #loadinIcon {
     width: 200px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 1024px) {
