@@ -47,6 +47,14 @@
 
         <!-- <v-progress-circular id="loading" size="100" v-if="loading" indeterminate color="primary"></v-progress-circular> -->
     </v-card>
+      <footer>
+        <p>
+            Desenvolvido por 
+            <a href="https://rafaelpatrick.com.br/" target="_blank" rel="noopener noreferrer"
+                Rafael Patrick de Souza
+            </a>
+        </p>
+    </footer>
 </template>
   
 <script setup>
@@ -255,6 +263,28 @@ setTimeout(() => {
 #loadinIcon {
     width: 200px;
 }
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+footer a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
 
 @media screen and (max-width: 1024px) {
     .conteudo {
