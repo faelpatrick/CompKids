@@ -199,7 +199,13 @@ setTimeout(() => {
     gap: 4px;
 }
 
-
+.placar-title{
+  width: 83%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .img_opcao {
     width: 100%;
