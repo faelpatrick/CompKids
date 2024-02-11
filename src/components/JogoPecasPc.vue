@@ -58,6 +58,9 @@
   
 <script setup>
 import { onMounted, ref } from 'vue';
+import { inject } from '@vercel/analytics';
+ 
+inject();
 
 const mostrarSnackbar = ref(false);
 let snackBarMsg = ref('Ação realizada com sucesso!!!');
