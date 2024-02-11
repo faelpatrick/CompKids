@@ -235,6 +235,7 @@ setTimeout(() => {
 .v-row.grid_imgs {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    padding-bottom: 2rem;
 }
 
 #loading {
