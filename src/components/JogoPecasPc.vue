@@ -44,15 +44,16 @@
                 </v-btn>
             </template>
         </v-snackbar>
+
+        <v-footer class="d-flex flex-column">
+            <div class="px-4 py-2 bg-black text-center w-100 footer">
+                Desenvolvido por
+                <a href="https://rafaelpatrick.com.br/" target="_blank" rel="noopener noreferrer">
+                    Rafael Patrick de Souza
+                </a>
+            </div>
+        </v-footer>
     </v-card>
-    <v-footer class="d-flex flex-column">
-        <div class="px-4 py-2 bg-black text-center w-100 footer">
-            Desenvolvido por
-            <a href="https://rafaelpatrick.com.br/" target="_blank" rel="noopener noreferrer">
-                Rafael Patrick de Souza
-            </a>
-        </div>
-    </v-footer>
 </template>
   
 <script setup>
@@ -258,8 +259,8 @@ setTimeout(() => {
     transform: translate(-50%, -50%);
 }
 
-#loadinIcon {
-    width: 200px;
+.footer {
+    border-radius: 8px;
 }
 
 .footer a {
