@@ -46,7 +46,7 @@
         </v-snackbar>
 
         <!-- <v-progress-circular id="loading" size="100" v-if="loading" indeterminate color="primary"></v-progress-circular> -->
-    </v-card>
+    
       <footer>
         <p>
             Desenvolvido por 
@@ -55,6 +55,7 @@
             </a>
         </p>
     </footer>
+    </v-card>
 </template>
   
 <script setup>
